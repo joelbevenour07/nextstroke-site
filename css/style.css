@@ -336,6 +336,36 @@ footer {
 
 }
 
+.intent-info{
+
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+
+
+}
+
+.progress-info{
+
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+
+
+}
+
+.results-info{
+
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+
+
+}
+
 .hero-about {
     position: relative;
     width: 100%;
@@ -385,6 +415,14 @@ footer {
         box-sizing: border-box;
         height: 20vh;
     }
+
+    .hero-about{
+        margin-top: 60px;
+        padding-top: 60px; /* adjust to match navbar height */
+        box-sizing: border-box;
+        height: 20vh;
+    }
+
     .hero-video {
         height: 20vh;
     }
