@@ -474,7 +474,7 @@ footer {
     }
 
     .hero-content-about img.logo-2 {
-    height: 100px;                /* adjust image size */
+    height: 12vh;                /* adjust image size */
     width: auto;                  /* maintain aspect ratio */
 
     }
