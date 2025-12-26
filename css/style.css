@@ -377,7 +377,7 @@ footer {
         margin-top: 60px;
         padding-top: 60px; /* adjust to match navbar height */
         box-sizing: border-box;
-        height: 50vh;
+        height: 20vh;
     }
     .hero-video {
         height: 100%;
