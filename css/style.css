@@ -374,7 +374,8 @@ footer {
 
     /* Hero section */
     .hero {
-        margin-top:30px;
+        padding-top: 60px; /* adjust to match navbar height */
+        box-sizing: border-box;
         height: 50vh;
     }
     .hero-video {
