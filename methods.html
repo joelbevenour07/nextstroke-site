@@ -34,12 +34,12 @@
 
     <header class="hero-about">
 
-      <video class="hero-video" autoplay muted playsinline>
+      <!-- <video class="hero-video" autoplay muted playsinline>
           <source src="videos/header_transition.mp4" type="video/mp4">
           Your browser does not support the video tag.
-      </video>
+      </video> -->
 
-      <div class="hero-content">
+      <div class="hero-content-about">
         <img src="images/nextstroke_logo2.png" alt="ns_logo" class="logo">
         <h1 class="about-header">Methods</h1>
       </div>
@@ -155,8 +155,8 @@
                 <!-- RIGHT COLUMN -->
                 <div class="col-md-6">
 
-                  <label for="pr2k">2k PR (eg. 6:25) *</label>
-                  <input type="text"  class="form-control" id="pr2k" required>
+                  <label for="pr2k">2k PR (eg. 6:25)</label>
+                  <input type="text"  class="form-control" id="pr2k">
 
                   <label for="pr6k">6k PR (eg. 19:55)</label>
                   <input type="text" class="form-control" id="pr6k">
@@ -165,8 +165,8 @@
                   <!-- Height + Weight -->
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="height" class="form-label">Height (inches) *</label>
-                      <input type="number" class="form-control" min="0" id="height" required>
+                      <label for="height" class="form-label">Height (inches)</label>
+                      <input type="number" class="form-control" min="0" id="height">
                     </div>
 
                     <div class="col-md-6 mb-3">
@@ -204,25 +204,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const video = document.querySelector('.hero-video');
-        const content = document.querySelector('.hero-content');
-
-        // Listen for video end
-        video.addEventListener('ended', () => {
-            // Fade out the video
-            video.style.opacity = 0;
-
-            // Fade in content
-            content.classList.add('visible');
-        });
-
-        // Optional: if video is very short, trigger if already ended
-        if (video.ended) {
-            video.style.opacity = 0;
-            content.classList.add('visible');
-        }
-    });
 
     document.addEventListener('DOMContentLoaded', () => {
     const slideElems = document.querySelectorAll('.slide-in-left, .slide-in-right');

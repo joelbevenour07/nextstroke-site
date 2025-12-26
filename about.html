@@ -34,12 +34,12 @@
 
     <header class="hero-about">
 
-      <video class="hero-video" autoplay muted playsinline>
+      <!-- <video class="hero-video" autoplay muted playsinline>
           <source src="videos/header_transition.mp4" type="video/mp4">
           Your browser does not support the video tag.
-      </video>
+      </video> -->
 
-      <div class="hero-content">
+      <div class="hero-content-about">
         <img src="images/nextstroke_logo2.png" alt="ns_logo" class="logo">
         <h1 class="about-header">About Us</h1>
       </div>
@@ -54,10 +54,7 @@
       <div class="row luke-about">
 
           <div class="col-lg-6 mb-4 order-2 order-lg-1">
-            <h2>
-              Luke Iannelli
-            </h2>
-            <br>
+
             <p class="about-text">
               Luke Iannelli is a lightweight rower and the founder of NextStroke, known for his competitive mindset and disciplined approach to training. <br><br>
               After not completing his freshman year, Luke fully bought into the behind the scenes details that make rowers fast. His commitment paid off as he became a decorated athlete at La Salle.
@@ -69,6 +66,9 @@
 
 
           <div id="about-gallery" class="col-lg-6 mb-4 carousel slide order-1 order-lg-2" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <h2>
+              Luke Iannelli
+            </h2>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="images/ns_photo_headshot.jpg" class="img-fluid" alt="Screenshot 1">
@@ -92,6 +92,9 @@
 
       <div class="row joel-about">
           <div id="about-gallery" class="col-lg-6 mb-4 carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <h2>
+              Joel Bevenour
+            </h2>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="images/ns_photo_joel1.jpg" class="img-fluid" alt="Screenshot 1">
@@ -108,10 +111,7 @@
           </div>
 
           <div class="col-lg-6 mb-4">
-            <h2>
-              Joel Bevenour
-            </h2>
-            <br>
+
             <p class="about-text">
               Joel Bevenour was a heavyweight rower for La Salle University, and acted as their captain for 3 years in a row.<br><br>
               Ever since he stepped onto campus, he had a drive to lead by example and put his best foot forward every day. Joel utilized the wisdom he learned from his talented
@@ -172,8 +172,8 @@
                 <!-- RIGHT COLUMN -->
                 <div class="col-md-6">
 
-                  <label for="pr2k">2k PR (eg. 6:25) *</label>
-                  <input type="text"  class="form-control" id="pr2k" required>
+                  <label for="pr2k">2k PR (eg. 6:25)</label>
+                  <input type="text"  class="form-control" id="pr2k">
 
                   <label for="pr6k">6k PR (eg. 19:55)</label>
                   <input type="text" class="form-control" id="pr6k">
@@ -182,8 +182,8 @@
                   <!-- Height + Weight -->
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="height" class="form-label">Height (inches) *</label>
-                      <input type="number" class="form-control" min="0" id="height" required>
+                      <label for="height" class="form-label">Height (inches)</label>
+                      <input type="number" class="form-control" min="0" id="height">
                     </div>
 
                     <div class="col-md-6 mb-3">
@@ -221,25 +221,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const video = document.querySelector('.hero-video');
-        const content = document.querySelector('.hero-content');
-
-        // Listen for video end
-        video.addEventListener('ended', () => {
-            // Fade out the video
-            video.style.opacity = 0;
-
-            // Fade in content
-            content.classList.add('visible');
-        });
-
-        // Optional: if video is very short, trigger if already ended
-        if (video.ended) {
-            video.style.opacity = 0;
-            content.classList.add('visible');
-        }
-    });
 
     document.addEventListener('DOMContentLoaded', () => {
     const slideElems = document.querySelectorAll('.slide-in-left, .slide-in-right');
