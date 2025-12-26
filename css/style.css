@@ -362,6 +362,12 @@ footer {
 
 }
 
+.hero-content-about img.logo-2 {
+    height: 160px;                /* adjust image size */
+    width: auto;                  /* maintain aspect ratio */
+
+    }
+
 .intent-info{
 
     font-family:'Garet-Book';
@@ -463,10 +469,16 @@ footer {
         height: 100px;
     }
 
-    /* Headings */
-    header h1, .about-header {
-        font-size: 2rem;
+    .about-header{
+        font-size:32px;
     }
+
+    .hero-content-about img.logo-2 {
+    height: 100px;                /* adjust image size */
+    width: auto;                  /* maintain aspect ratio */
+
+    }
+
     h2 {
         font-size: 1.5rem;
     }
