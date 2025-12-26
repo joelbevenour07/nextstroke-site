@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStroke</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <nav class="navbar fixed-top">
+      <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="methods.html">Methods</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+
+      <video class="hero-video" autoplay muted playsinline>
+          <source src="videos/header_transition.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+
+      <div class="hero-content">
+        <img src="images/nextstroke_logo.png" alt="ns_logo" class="logo">
+        <h1>NextStroke</h1>
+      </div>
+
+    </header>
+
+
+
+<div class="container">
+    <!-- Section 1 Photos, Mission Statement, etc. -->
+  <div class="mb-4">
+    <div class="project-row slide-in-left">
+        <div class="row">
+
+
+          <div id="ns-gallery" class="carousel slide col-md-6 mb-3" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/ns_photo_henley.jpg" class="img-fluid" alt="Screenshot 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/ns_photo_practice.jpg" class="img-fluid" alt="Screenshot 2">
+
+              </div>
+              <div class="carousel-item">
+                <img src="images/ns_photo_luke1.jpg" class="img-fluid" alt="Screenshot 3">
+              </div>
+              </div>
+            </div>
+
+          <div class="col-lg-6 mb-4">
+            <h2>
+              Faster on the Erg, stronger on the water
+            </h2>
+            <br>
+            <p>
+              NextStroke combines over 15 years of rowing experience from coaches of both lightweight and heavyweights to tailor training for every athlete. 
+              Our proven programs, lifestyle strategies and mindset techniques unlock free speed so you can excel on and off the water.
+            </p>
+          </div>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 give info for tips PDF  -->
+  <div class="mb-5">
+    <div class="project-row slide-in-right">
+
+        <div class="row">
+
+          <div class="col-md-12 order-md-1 slide-in-right">
+            <h2 style="align-self:center">
+              MEET WITH US
+            </h2>
+
+          </div>
+
+          <div class="col-md-12 order-md-2 slide-in-right">
+            <h3>
+              Contact us to learn how we can help you crush your rowing goals. The linked email will receive a FREE Rowing hacks PDF to help you drop speed immediately.
+            </h3>
+
+          </div>
+        </div>
+        <div class="row row-2">
+          <div class="col-md-12">
+
+            <form class="signup-form" action="#" method="post">
+
+              <div class="row">
+
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6">
+
+                  <label for="first-name">First Name *</label>
+                  <input type="text" class="form-control" id="first-name" required>
+
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" class="form-control"  id="last-name" required>
+
+                  <label for="email">Email *</label>
+                  <input type="email" class="form-control" id="email" required>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6">
+
+                  <label for="pr2k">2k PR (eg. 6:25) *</label>
+                  <input type="text"  class="form-control" id="pr2k" required>
+
+                  <label for="pr6k">6k PR (eg. 19:55)</label>
+                  <input type="text" class="form-control" id="pr6k">
+
+                  
+                  <!-- Height + Weight -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="height" class="form-label">Height (inches) *</label>
+                      <input type="number" class="form-control" min="0" id="height" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="weight" class="form-label">Weight (lbs)</label>
+                      <input type="number" class="form-control" min="0" id="weight">
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- SUBMIT BUTTON -->
+              <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                  <button type="submit">Sign Up</button>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    <footer>
+        <p1>NextStroke Not Affiliated with LaSalle University</p1>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.hero-video');
+        const content = document.querySelector('.hero-content');
+
+        // Listen for video end
+        video.addEventListener('ended', () => {
+            // Fade out the video
+            video.style.opacity = 0;
+
+            // Fade in content
+            content.classList.add('visible');
+        });
+
+        // Optional: if video is very short, trigger if already ended
+        if (video.ended) {
+            video.style.opacity = 0;
+            content.classList.add('visible');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const slideElems = document.querySelectorAll('.slide-in-left, .slide-in-right');
+    slideElems.forEach(el => {
+        el.classList.add('active');
+        });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,367 @@
+/* Site fonts */
+
+@font-face {
+    font-family: 'Caviar'; 
+    src: url('../fonts/CaviarDreams.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'Nexa-Heavy'; 
+    src: url('../fonts/Nexa-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'Garet-Book'; 
+    src: url('../fonts/Garet-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'CreatoDisplay'; 
+    src: url('../fonts/CreatoDisplay-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
+
+/* Body styles */
+body {
+    margin:90px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: url('../images/Gradient_ns.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+/* Header styles and text block styling*/
+header {
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+header h1 {
+    margin: 0;
+    font-family:'Caviar';
+    font-size:64px;
+    color:white
+    
+}
+
+h2{
+   font-family: 'Nexa-Heavy';
+   text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+
+}
+
+h3{
+   font-family: 'Nexa-Heavy';
+   text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+   font-size:22px;
+   
+
+}
+
+a{
+    color:black;
+    font-family:'Caviar';
+    font-weight:bolder;
+}
+
+p{
+    font-family:'Garet-Book';
+    font-size: 26px;
+    text-align:justify;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.12),
+        0 12px 30px rgba(0,0,0,0.18);
+
+
+}
+
+.intent{
+    font-size:16px;
+}
+
+.progress-text{
+    font-size:16px;
+}
+
+.results{
+    font-size:16px;
+}
+
+.col-lg-3{
+    margin:40px;
+    
+}
+
+.project-row{
+    justify-content:center;
+}
+
+
+/* Header video transition into logo styling */
+
+
+.leadin{
+    font-family:'Nexa-Heavy';
+    font-size: 24px;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #040134; /* fallback */
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    opacity: 0;                  /* start invisible */
+    transform: translateY(-20px); /* start slightly above */
+    transition: opacity 1.2s ease, transform 1.2s ease;
+
+}
+
+.hero-content.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-content img.logo {
+    height: 160px;                /* adjust image size */
+    width: auto;                  /* maintain aspect ratio */
+
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    object-fit: cover; /* ensures video fills the header */
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Column and row spacing */
+
+.col-md-4{
+    margin:10px;
+}
+
+
+.row-2 .col-md-4{
+    margin-left : 80px;
+}
+
+.mb-5{
+    margin-top:40px;
+}
+
+.col-lg-3{
+    margin-left:50px;
+    margin-right:50px;
+    
+}
+
+.method-pics{
+    justify-content:center;
+}
+
+.method-info{
+    justify-content:center;
+}
+
+/* JS element sliding effects on load */
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px); /* move left */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.slide-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px); /* move right */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Form box styling */
+
+.signup-form {
+    max-width: 200vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px 22px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.12),
+        0 12px 30px rgba(0,0,0,0.18);
+
+}
+
+
+/* Input wrapper */
+.signup-form {
+    position: relative;
+}
+
+input{
+    margin:15px;
+    margin-left:5px;
+}
+
+/* Label styling */
+.signup-form label {
+    position: relative;
+    top: 16px;
+    font-size: 18px;
+    color: #666;;
+    font-family:'CreatoDisplay'
+}
+
+/* Inputs & select */
+.signup-form input{
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    padding: 10px 12px 10px;
+}
+
+/* Focus effect */
+.signup-form input:focus{
+    border-color: #0077ff;
+}
+
+/* Button */
+.signup-form button {
+    width: 25%;
+    align-self:center;
+    margin-top: 5px;
+    font-family:'CreatoDisplay';
+    padding: 14px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Nav bar styling */
+.navbar {
+  background: rgba(83, 141, 223, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+/* About page styling */
+
+.about-text{
+    margin-right:20px;
+    font-family:'Garet-Book';
+    font-size: 18px;
+    text-align:justify;
+    background: rgb(255, 255, 255);
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.12),
+        0 12px 30px rgba(0,0,0,0.18);
+
+
+}
+
+.hero-about {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #879db7; /* fallback */
+    
+}
+
+.about-header{
+    margin: 0;
+    font-family:'Caviar';
+    font-size:64px;
+    color:black
+}
+
+.joel-about{
+    margin-top:150px;
+}
+
+#about-gallery .carousel-item {
+  min-height: 300px;
+  max-height: 900px;
+}
+
+
