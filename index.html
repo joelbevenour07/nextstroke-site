@@ -247,7 +247,7 @@
       }
 
       try {
-        const res = await fetch('https://nextstroke-api.onrender.com', {
+        const res = await fetch('https://nextstroke-api.onrender.com/signups', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
