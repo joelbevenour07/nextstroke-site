@@ -110,7 +110,7 @@
         <div class="row row-2">
           <div class="col-md-12">
 
-            <form class="signup-form" action="#" method="post">
+            <form id="signup-form" class="signup-form" action="#" method="post">
 
               <div class="row">
 
@@ -205,6 +205,78 @@
     slideElems.forEach(el => {
         el.classList.add('active');
         });
+    });
+
+
+    const form = document.getElementById('signup-form');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // prevent default POST
+
+      const data = {
+        first_name: document.getElementById('first-name').value.trim(),
+        last_name: document.getElementById('last-name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        height: parseInt(document.getElementById('height').value) || null,
+        weight: parseInt(document.getElementById('weight').value) || null,
+        erg_2k: document.getElementById('pr2k').value.trim() || null,
+        erg_6k: document.getElementById('pr6k').value.trim() || null
+      };
+
+      // Regex patterns
+      const nameRegex = /^[A-Za-z]+(?:[-' ][A-Za-z]+)*$/; // allows letters, hyphens, apostrophes, spaces
+      const ergRegex = /^\d{1,2}:\d{2}$/; // same for both 2k and 6k
+
+      const first_name = document.getElementById('first-name').value.trim();
+      const last_name  = document.getElementById('last-name').value.trim();
+      const erg_2k     = document.getElementById('pr2k').value.trim();
+      const erg_6k     = document.getElementById('pr6k').value.trim();
+
+      // Front-end validation
+      if (!nameRegex.test(first_name)) {
+        return alert('First name must contain only letters, hyphens, or apostrophes.');
+      }
+      if (!nameRegex.test(last_name)) {
+        return alert('Last name must contain only letters, hyphens, or apostrophes.');
+      }
+      if (erg_2k && !ergRegex.test(erg_2k)) {
+        return alert('2k PR must be in x:xx or xx:xx format.');
+      }
+      if (erg_6k && !ergRegex.test(erg_6k)) {
+        return alert('6k PR must be in x:xx or xx:xx format.');
+      }
+
+      try {
+        const res = await fetch('http://localhost:3000/signups', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+
+
+        const json = await res.json();
+        if (json.success) {
+          alert('Signup successful!');
+          form.reset();
+        } 
+
+        else if (res.status === 409) {
+          alert('This email is already registered!');
+        } 
+
+        else if (res.status === 429) {
+          alert('Too many requests, try again later.');
+        } 
+
+
+        else {
+          alert('Something went wrong');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Server error');
+      }
     });
   </script>
 </body>
