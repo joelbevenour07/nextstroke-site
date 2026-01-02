@@ -51,15 +51,9 @@ body {
     margin-top:5vh;
 }
 
-.home-elite{
-    max-width:90vh;
-    margin-right:10vh;
-}
 
 .home-smart{
-    max-width:90vh;
-    margin-left:10vh;
-    margin-top:3vh;
+    text-align:right;
 }
 
 /* Header styles and text block styling*/
