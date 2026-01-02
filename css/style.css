@@ -40,26 +40,11 @@ body {
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
-    background-image: url('../images/Gradient_ns.png');
+    /* background-image: url('../images/Gradient_ns.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
-}
-
-
-
-
-.home-smart{
-    margin-top:5vh;
-    text-align:right;
-}
-
-/* Header styles and text block styling*/
-header {
-    padding: 50px 0;
-    text-align: center;
-    margin-bottom: 10vh;
 }
 
 header h1 {
@@ -77,12 +62,6 @@ h1{
    text-align:left;
 }
 
-.special-offer{
-    text-align:center;
-    font-size: 54px;
-    margin-bottom: 5vh;
-}
-
 h2{
    font-family: 'Nexa-Heavy';
    text-shadow: 0 2px 6px rgba(0,0,0,0.25);
@@ -96,7 +75,7 @@ h3{
 }
 
 a{
-    color:black;
+    color:rgb(255, 255, 255);
     font-family:'Caviar';
     font-weight:bolder;
 }
@@ -111,51 +90,9 @@ p{
     box-shadow:
         0 4px 10px rgba(0,0,0,0.12),
         0 12px 30px rgba(0,0,0,0.18);
-
-
 }
-
-.individual-coach-text{
-    font-size:32px;
-}
-
-.intent{
-    font-size:18px;
-}
-
-.progress-text{
-    font-size:18px;
-}
-
-.results{
-    font-size:18px;
-}
-
-.advantage{
-    font-size:24px;
-}
-
-.hacks{
-    font-size:24px;
-}
-
-.tech{
-    font-size:24px;
-}
-
-
-.col-lg-3{
-    margin:0px;
-    
-}
-
-.project-row{
-    justify-content:center;
-}
-
 
 /* Header video transition into logo styling */
-
 
 .leadin{
     font-family:'Nexa-Heavy';
@@ -238,57 +175,10 @@ p{
     transition: opacity 0.5s ease;
 }
 
-/* Column and row spacing */
-
-.col-md-4{
-    margin:10px;
-}
-
-
-.row-2 .col-md-4{
-    margin-left : 0px;
-}
-
-.mb-5{
-    margin-top:0px;
-}
-
-.col-lg-3{
-    margin-left:0px;
-    margin-right:0px;
-    
-}
-
-.tech-analysis{
-    margin-left:0px;
-    margin-right:0px;
-}
-
-.speed-consult{
-    margin-left:0px;
-    margin-right:0px;
-}
-
-.stroke-advantage{
-    margin-left:0px;
-    margin-right:0px;
-}
-
-.individual-coach{
-    margin-left:0px;
-    margin-right:0px;
-}
-
-.method-pics{
-    justify-content:center;
-}
-
-.method-info{
-    justify-content:center;
-}
-
-.arrow_mobile{
-    margin-bottom:3vh;
+header {
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 10vh;
 }
 
 /* JS element sliding effects on load */
@@ -317,11 +207,10 @@ p{
     transform: translateX(0);
 }
 
-
 /* Form box styling */
 
 .meet-us{
-    margin-top:5vh;
+   margin-top:15vh;
 }
 
 .signup-form {
@@ -337,7 +226,6 @@ p{
         0 12px 30px rgba(0,0,0,0.18);
 
 }
-
 
 /* Input wrapper */
 .signup-form {
@@ -403,11 +291,44 @@ footer {
 
 /* Nav bar styling */
 .navbar {
-  background: rgba(83, 141, 223, 0.4);
+  background-color:#000000;
   backdrop-filter: blur(6px);
+  
 }
 
-/* About page styling */
+.navbar .nav-link {
+    color: white !important;
+}
+
+/* .navbar-toggler{
+  color:white;
+  background-color:white;
+}
+
+.navbar-toggler-icon{
+  color:white;
+  background-color:white;
+} */
+
+.project-row{
+    justify-content:center;
+}
+
+/* Column and row spacing */
+
+.col-md-4{
+    margin:10px;
+}
+
+/* Home page */
+
+.home-smart{
+    margin-top:5vh;
+
+}
+
+
+/* About Page */
 
 .about-text{
     margin-right:20px;
@@ -420,64 +341,6 @@ footer {
     box-shadow:
         0 4px 10px rgba(0,0,0,0.12),
         0 12px 30px rgba(0,0,0,0.18);
-
-
-}
-
-
-.hero-content-about img.logo-2 {
-    height: 160px;                /* adjust image size */
-    width: auto;                  /* maintain aspect ratio */
-
-    }
-
-.intent-info{
-
-    font-family:'Garet-Book';
-    text-align:justify;
-    padding: 18px 22px;
-    border-radius: 12px;
-
-
-}
-
-.progress-info{
-
-    font-family:'Garet-Book';
-    text-align:justify;
-    padding: 18px 22px;
-    border-radius: 12px;
-
-
-}
-
-.results-info{
-
-    font-family:'Garet-Book';
-    text-align:justify;
-    padding: 18px 22px;
-    border-radius: 12px;
-
-
-}
-
-.hero-about {
-    position: relative;
-    width: 100%;
-    height: 20vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #879db7; /* fallback */
-    
-}
-
-.about-header{
-    margin: 0;
-    font-family:'Caviar';
-    font-size:64px;
-    color:black
 }
 
 .joel-about{
@@ -488,14 +351,131 @@ footer {
     text-align:right;
 }
 
+/* Methods Page */
 
-#about-gallery .carousel-item {
-  min-height: 300px;
-  max-height: 900px;
+.intent{
+    font-size:18px;
+}
+
+.progress-text{
+    font-size:18px;
+}
+
+.results{
+    font-size:18px;
+}
+
+.method-pics{
+    justify-content:center;
+}
+
+.method-info{
+    justify-content:center;
+}
+
+.arrow_mobile{
+    margin-bottom:3vh;
+}
+
+.intent-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.progress-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.results-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+/* Services Page */
+
+.advantage{
+    font-size:24px;
+}
+
+.hacks{
+    font-size:24px;
+}
+
+.tech{
+    font-size:24px;
+}
+
+.special-offer{
+    text-align:center;
+    font-size: 54px;
+    margin-top:5vh;
+    margin-bottom: 5vh;
+}
+
+.individual-coach-text{
+    font-size:32px;
 }
 
 .individual-coach{
     margin-bottom: 10vh;
+}
+
+.hero-content-about img.logo-2 {
+    height: 160px;                /* adjust image size */
+    width: auto;                  /* maintain aspect ratio */
+    }
+
+
+.tech-analysis-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.speed-consult-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.stroke-advantage-info{
+    font-family:'Garet-Book';
+    text-align:justify;
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.hero-about {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000; /* fallback */
+    
+}
+
+.about-header{
+    margin: 0;
+    font-family:'Caviar';
+    font-size:64px;
+    color:rgb(255, 255, 255)
+}
+
+#about-gallery .carousel-item {
+  min-height: 300px;
+  max-height: 900px;
 }
 
 /* Responsive adjustments for mobile */
